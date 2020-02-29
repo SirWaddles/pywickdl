@@ -1,0 +1,16 @@
+[package]
+name = "pywickdl"
+version = "0.1.0"
+authors = ["Waddlesworth <github@genj.io>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+tokio = { version = "0.2", features = ["full"] }
+wickdl = { git = "https://github.com/SirWaddles/WickDownloader" }
+
+[dependencies.cpython]
+git = "https://github.com/dgrunwald/rust-cpython"
+features = ["extension-module"]
